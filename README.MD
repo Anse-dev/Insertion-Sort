@@ -18,15 +18,15 @@ VAR
    arr: tableau à trier
    i, j, key: entiers
 BEGIN
-   FOR i = 1 TO n-1
-      key = arr[i]
-      j = i - 1
+   FOR i FROM 1 TO n-1
+      key := arr[i]
+      j := i - 1
 
       WHILE j >= 0 AND arr[j] > key
          arr[j + 1] = arr[j]
-         j = j - 1
+         j := j - 1
 
-      arr[j + 1] = key
+      arr[j + 1] := key
    END FOR
 END
 ```
