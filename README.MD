@@ -14,19 +14,19 @@ L'algorithme suit les instructions suivantes :
 ```plaintext
 ALGORITHM InsertionSort
 VAR
-   n: longueur du tableau
-   arr: tableau à trier
-   i, j, key: entiers
+   n: INTEGER;
+   arr:  ARRAY_OF INTEGER[44];
+   i, j, key: INTEGER;
 BEGIN
-   FOR i FROM 1 TO n-1
-      key := arr[i]
-      j := i - 1
+   FOR i FROM 1 TO n-1 DO
+      key := arr[i];
+      j := i - 1;
 
-      WHILE j >= 0 AND arr[j] > key
-         arr[j + 1] = arr[j]
-         j := j - 1
+      WHILE (j >= 0 AND arr[j] > key)
+         arr[j + 1] = arr[j];
+         j := j - 1;
 
-      arr[j + 1] := key
+      arr[j + 1] := key;
    END FOR
 END
 ```
