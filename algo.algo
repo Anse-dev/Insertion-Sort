@@ -1,0 +1,17 @@
+ALGORITHM InsertionSort
+VAR
+   n: length of the array
+   arr: array to be sorted
+   i, j, key: integers
+BEGIN
+   FOR i = 1 TO n-1
+      key = arr[i]
+      j = i - 1
+
+      WHILE j >= 0 AND arr[j] > key
+         arr[j + 1] = arr[j]
+         j = j - 1
+
+      arr[j + 1] = key
+   END FOR
+END
